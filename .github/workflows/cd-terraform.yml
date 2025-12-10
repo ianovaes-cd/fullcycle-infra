@@ -39,15 +39,15 @@ jobs:
       
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: ${{ steps.settings-parser.outputs.aws-region }}
-          role-to-assume: "arn:aws:iam::${{ steps.settings-parser.outputs.account-id }}:role/${{ github.event.repository.name }}"
+          aws-region: ${{ steps.settings-parser.outputs.aws_region }}
+          role-to-assume: "arn:aws:iam::${{ steps.settings-parser.outputs.account_id }}:role/${{ github.event.repository.name }}"
           mask-aws-account-id: false
           role-skip-session-tagging: true
           role-duration-seconds: 3600
       
       - uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: ${{ steps.settings-parser.outputs.terraform-version }}
+          terraform_version: ${{ steps.settings-parser.outputs.terraform_version }}
 
       - name: Terraform Init
         id: init
