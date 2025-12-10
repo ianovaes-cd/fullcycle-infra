@@ -1,25 +1,25 @@
 name: 'CI Terraform'
 
 permissions:
-    id-token: write
-    constents: write
-    actions: write
-    pull-requests: write
-    packages: read
+  id-token: write
+  contents: write
+  actions: write
+  pull-requests: write
+  packages: read
 
 on:
-    workflows_call:
-        inputs:
-            settings-file:
-                description: 'Path to the settings file'
-                required: false
-                type: string
-                default: 'settings.yml'
-            runs-on:
-                description: 'Runner label to use'
-                required: false
-                type: string
-                default: 'ubuntu-latest'
+  workflow_call:
+    inputs:
+      settings-file:
+        description: 'Path to the settings file'
+        required: false
+        type: string
+        default: 'settings.yml'
+      runs-on:
+        description: 'Runner label to use'
+        required: false
+        type: string
+        default: 'ubuntu-latest'
 
 jobs:
   ci-terraform:
