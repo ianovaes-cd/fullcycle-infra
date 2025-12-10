@@ -17,8 +17,8 @@ module "ec2_instance" {
 
 terraform {
   backend "s3" {
-    buckend = "teste-repo-fullcycleteste-repo-ian-fullcycle"
-    key     = "teste"
-    region  = "us-east-1"
+    buck   = "teste-repo-fullcycleteste-repo-ian-fullcycle"
+    key    = "teste"
+    region = "us-east-1"
   }
 }
