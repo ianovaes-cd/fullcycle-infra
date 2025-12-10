@@ -1,4 +1,4 @@
-modulo "ec2_instance" {
+module "ec2_instance" {
   source = "terraform-aws-modules/ec2-instance/aws"
 
   name = "single-instance"
